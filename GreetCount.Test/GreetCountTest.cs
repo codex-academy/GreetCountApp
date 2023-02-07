@@ -9,6 +9,8 @@ public class GreetCountTest
     private static string cn = "Host=localhost;Username=counter;Password=counter123;Database=counter_app";
 
     static string GetConnectionString() {
+        // read the connection string from an environment variable...
+        // this make is possible for this test to run on Git Hub Actions
         var theCN = Environment.GetEnvironmentVariable("PSQLConnectionString");
         if (theCN == "" || theCN == null) {
             theCN = cn;
@@ -39,7 +41,6 @@ public class GreetCountTest
     public void GreetUserMoreThanOnce()
     {
 
-
         IGreetCount greetCount = new SQLGreetCount(GetConnectionString());
         greetCount.Greet("Andy");
         greetCount.Greet("Andy");
@@ -50,8 +51,7 @@ public class GreetCountTest
     [Fact]
     public void GreetThreeUsers()
     {
-
-
+        
         IGreetCount greetCount = new SQLGreetCount(GetConnectionString());
         greetCount.Greet("Andy");
         greetCount.Greet("Bob");
