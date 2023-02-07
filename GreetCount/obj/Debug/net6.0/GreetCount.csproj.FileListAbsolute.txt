@@ -1,0 +1,12 @@
+/Users/andrevermeulen/projects/GreetCountApp/GreetCount/obj/Debug/net6.0/GreetCount.csproj.AssemblyReference.cache
+/Users/andrevermeulen/projects/GreetCountApp/GreetCount/obj/Debug/net6.0/GreetCount.GeneratedMSBuildEditorConfig.editorconfig
+/Users/andrevermeulen/projects/GreetCountApp/GreetCount/obj/Debug/net6.0/GreetCount.AssemblyInfoInputs.cache
+/Users/andrevermeulen/projects/GreetCountApp/GreetCount/obj/Debug/net6.0/GreetCount.AssemblyInfo.cs
+/Users/andrevermeulen/projects/GreetCountApp/GreetCount/obj/Debug/net6.0/GreetCount.csproj.CoreCompileInputs.cache
+/Users/andrevermeulen/projects/GreetCountApp/GreetCount/bin/Debug/net6.0/GreetCount.deps.json
+/Users/andrevermeulen/projects/GreetCountApp/GreetCount/bin/Debug/net6.0/GreetCount.dll
+/Users/andrevermeulen/projects/GreetCountApp/GreetCount/bin/Debug/net6.0/GreetCount.pdb
+/Users/andrevermeulen/projects/GreetCountApp/GreetCount/obj/Debug/net6.0/GreetCount.dll
+/Users/andrevermeulen/projects/GreetCountApp/GreetCount/obj/Debug/net6.0/refint/GreetCount.dll
+/Users/andrevermeulen/projects/GreetCountApp/GreetCount/obj/Debug/net6.0/GreetCount.pdb
+/Users/andrevermeulen/projects/GreetCountApp/GreetCount/obj/Debug/net6.0/ref/GreetCount.dll
