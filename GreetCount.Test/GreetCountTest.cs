@@ -8,8 +8,6 @@ public class GreetCountTest
 {
     private static string cn = "Host=localhost;Username=counter;Password=counter123;Database=counter_app";
 
-    // var environment = Environment.GetEnvironmentVariable("windir");
-
     static string GetConnectionString() {
         var theCN = Environment.GetEnvironmentVariable("PSQLConnectionString");
         if (theCN == "" || theCN == null) {

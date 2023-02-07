@@ -14,6 +14,22 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    services:
+      postgres:
+        image: postgres:latest
+        env: 
+          POSTGRES_USER: counter
+          POSTGRES_PASSWORD: counter123
+          POSTGRES_DB: counter_app
+        ports:
+        - 5432:5432
+        # Set health checks to wait until postgres has started
+        options: >-
+            --health-cmd pg_isready
+            --health-interval 10s
+            --health-timeout 5s
+            --health-retries 5
+
     steps:
     - uses: actions/checkout@v3
     - name: Setup .NET
@@ -24,5 +40,9 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
+    - name: create postgresql tables
+      run: PGPASSWORD=counter123 psql -h localhost -U counter -d counter_app -a -f ./GreetCount/sql/tables.sql
     - name: Test
       run: dotnet test --no-build --verbosity normal
+      env:
+        PSQLConnectionString: Host=localhost;Username=counter;Password=counter123;Database=counter_app
