@@ -53,4 +53,18 @@ Add an environment variable that matches the database configuration you did earl
 ```
 
 
+### Using and environment variable from C
 
+Use the `Environment.GetEnvironmentVariable` method to read a variable from an environment variable:
+
+```c#
+static string GetConnectionString() {
+        // read the connection string from an environment variable...
+        // this make is possible for this test to run on Git Hub Actions
+        var theCN = Environment.GetEnvironmentVariable("PSQLConnectionString");
+        if (theCN == "" || theCN == null) {
+            theCN = cn;
+        }
+        return theCN;
+    }
+```
